@@ -1,10 +1,27 @@
 import urllib2
 import json
 
-api_key = '31f9c50'
+InputMovie = input("Enter Movie Name: ")
 
-url = urllib2.urlopen('http://www.omdbapi.com/?t=James&y=1996&plot=full&apikey=31f9c50')
+def movieSearch(query):
+    key = '31f9c50'
 
-readableFormat = json.load(url)
+    url = urllib2.urlopen('http://www.omdbapi.com/?t=' + query + '&apikey=' + key)
+    data = json.load(url)
 
-print(readableFormat)
+    print(data['Title'])
+    print(data['Year'])
+
+
+
+movieSearch(InputMovie)
+
+
+
+
+
+
+
+
+
+
