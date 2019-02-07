@@ -27,7 +27,7 @@ def reSearch():
     if(x == 'Y' or x == 'y'):
         y = raw_input("Enter Movie:")
         movieSearch(y)
-
+        reSearch()
 
     else:
         quit()
@@ -40,6 +40,7 @@ if __name__ == "__main__":
 
     movieSearch(InputMovie)
     reSearch()
+
 
 
 
